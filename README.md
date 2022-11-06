@@ -14,7 +14,7 @@ The library was created using typescript for more convenient work with many type
 
 Install with npm:
 ```
-npm install ...
+npm i jspack.ts
 ```
 
 ## Formats

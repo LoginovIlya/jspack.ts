@@ -1,10 +1,10 @@
 import { pathsToModuleNameMapper } from 'ts-jest';
 import type { JestConfigWithTsJest } from 'ts-jest';
-import JSON5 from 'json5';
-import fs from 'fs';
+import * as JSON5 from 'json5';
+import * as fs from 'fs';
 
-const tsConfig = JSON5.parse(fs.readFileSync('./tsconfig.json').toString());
-const moduleNameMapper = pathsToModuleNameMapper(tsConfig.compilerOptions.paths);
+const tsConfigBase = JSON5.parse(fs.readFileSync('./tsconfig.base.json').toString());
+const moduleNameMapper = pathsToModuleNameMapper(tsConfigBase.compilerOptions.paths);
 
 const jestConfig: JestConfigWithTsJest = {
   preset: 'ts-jest',
