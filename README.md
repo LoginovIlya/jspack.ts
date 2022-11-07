@@ -173,6 +173,17 @@ npm i jspack.ts
 | \>  | Big endian           |
 | !   | Network (big endian) |
 
+## Initialization
+
+#### ES6:
+```typescript
+import { JSPack, JSPackFormat, JSPackEndianness } from 'jspack.ts';
+```
+#### Node:
+```typescript
+const { JSPack, JSPackFormat, JSPackEndianness } = require('jspack.ts');
+```
+
 ## Examples
 
 ### Formats:
@@ -190,17 +201,13 @@ npm i jspack.ts
 ### Char (ascii)
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(97)
-JSPack.Pack(JSPack.JSPackFormat.c, 'a');
+JSPack.Pack(JSPackFormat.c, 'a', JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return 'b'
-JSPack.Unpack(JSPack.JSPackFormat.c, new Uint8Array([98]));
+JSPack.Unpack(JSPackFormat.c, new Uint8Array([98]), JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -208,17 +215,13 @@ JSPack.Unpack(JSPack.JSPackFormat.c, new Uint8Array([98]));
 ### Int
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(0x85)
-JSPack.Pack(JSPack.JSPackFormat.b, -123);
+JSPack.Pack(JSPackFormat.b, -123, JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return -123
-JSPack.Unpack(JSPack.JSPackFormat.b, new Uint8Array([0x85]));
+JSPack.Unpack(JSPackFormat.b, new Uint8Array([0x85]), JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -226,21 +229,21 @@ JSPack.Unpack(JSPack.JSPackFormat.b, new Uint8Array([0x85]));
 ### Int64 (long long int)
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(0x00, 0x01, 0xEE, 0x0D, 0x32, 0xDE, 0xBC, 0xD1)
-JSPack.Pack(JSPack.JSPackFormat.q, {
+const longLongInt = {
     low: 0x32DEBCD1,
     high: 0x0001EE0D,
     unsigned: true,
-});
+};
+
+JSPack.Pack(JSPackFormat.q, longLongInt, JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
+const longLongIntBinary = new Uint8Array([0x00, 0x01, 0xEE, 0x0D, 0x32, 0xDE, 0xBC, 0xD1]);
 
 // Return { low: 0x32DEBCD1, high: 0x0001EE0D, unsigned: true }
-JSPack.Unpack(JSPack.JSPackFormat.q, new Uint8Array([0x00, 0x01, 0xEE, 0x0D, 0x32, 0xDE, 0xBC, 0xD1]));
+JSPack.Unpack(JSPackFormat.q, longLongIntBinary, JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -248,17 +251,13 @@ JSPack.Unpack(JSPack.JSPackFormat.q, new Uint8Array([0x00, 0x01, 0xEE, 0x0D, 0x3
 ### String (ASCII chars)
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(97, 98, 99)
-JSPack.Pack('abc');
+JSPack.Pack(JSPackFormat.s, 'abc', JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return 'abc'
-JSPack.Unpack(JSPack.JSPackFormat.s, new Uint8Array([97, 98, 99]));
+JSPack.Unpack(JSPackFormat.s, new Uint8Array([97, 98, 99]), JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -266,17 +265,13 @@ JSPack.Unpack(JSPack.JSPackFormat.s, new Uint8Array([97, 98, 99]));
 ### Array (Raw data)
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(0x61, 0x62, 0x63)
-JSPack.Pack(97, 98, 99);
+JSPack.Pack(JSPackFormat.A, [97, 98, 99], JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return [97, 98, 99]
-JSPack.Unpack(JSPack.JSPackFormat.A, new Uint8Array([0x61, 0x62, 0x63]));
+JSPack.Unpack(JSPackFormat.A, new Uint8Array([0x61, 0x62, 0x63]), JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -284,17 +279,13 @@ JSPack.Unpack(JSPack.JSPackFormat.A, new Uint8Array([0x61, 0x62, 0x63]));
 ### IEEE 754 (Float, Double)
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(0x47, 0x59, 0x3, 0x55)
-JSPack.Pack(JSPack.JSPackFormat.f, 55555.333);
+JSPack.Pack(JSPackFormat.f, 55555.333, JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return 55555.33203125
-JSPack.Unpack(JSPack.JSPackFormat.f, new Uint8Array([0x47, 0x59, 0x3, 0x55]));
+JSPack.Unpack(JSPackFormat.f, new Uint8Array([0x47, 0x59, 0x3, 0x55]), JSPackEndianness.bigEndian);
 ```
 
 ---
@@ -302,15 +293,11 @@ JSPack.Unpack(JSPack.JSPackFormat.f, new Uint8Array([0x47, 0x59, 0x3, 0x55]));
 ### Null Byte
 #### Pack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return Uint8Array(0)
-JSPack.Pack(0x0);
+JSPack.Pack(JSPackFormat.x, 0x0, JSPackEndianness.bigEndian);
 ```
 #### Unpack:
 ```typescript
-import JSPack from "jspack.ts";
-
 // Return 0
-JSPack.Unpack(JSPack.JSPackFormat.x, new Uint8Array([0]));
+JSPack.Unpack(JSPackFormat.x, new Uint8Array([0]), JSPackEndianness.bigEndian);
 ```
