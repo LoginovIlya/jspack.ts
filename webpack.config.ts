@@ -9,7 +9,6 @@ const config: Configuration = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
-    libraryExport: 'default',
     library: 'JSPack',
     umdNamedDefine: true,
     globalObject: '(typeof self !== \'undefined\' ? self : this)',
