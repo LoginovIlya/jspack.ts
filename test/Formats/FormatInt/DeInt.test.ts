@@ -1,4 +1,4 @@
-import DeInt from '@formatInt/DeInt';
+import DeInt from '@jspackTs/Formats/FormatInt/DeInt';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 // Test signed char number: -123

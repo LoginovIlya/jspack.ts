@@ -1,4 +1,4 @@
-import EncodeInterface from '@jspackTs/Formats/EncodeInterface';
+import EncodeInterface from '../EncodeInterface';
 
 export default class EnString implements EncodeInterface<string> {
   encode(data: string): Uint8Array {

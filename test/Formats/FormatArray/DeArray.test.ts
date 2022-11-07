@@ -1,4 +1,4 @@
-import DeArray from '@formatArray/DeArray';
+import DeArray from '@jspackTs/Formats/FormatArray/DeArray';
 
 describe('DeArray', () => {
   test('Test decode array', () => {

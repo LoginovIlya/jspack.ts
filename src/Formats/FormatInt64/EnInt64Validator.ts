@@ -1,6 +1,6 @@
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
-import JSPackLong from '@jspackTs/JSPackLong';
-import FormatInt64Data from '@jspackTs/Formats/FormatInt64/FormatInt64Data';
+import ValidatorInterface from '../ValidatorInterface';
+import JSPackLong from '../../JSPackLong';
+import FormatInt64Data from './FormatInt64Data';
 
 type EnIntFormatInt64 = keyof typeof FormatInt64Data;
 

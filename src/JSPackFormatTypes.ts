@@ -1,5 +1,5 @@
-import JSPackFormat from '@jspackTs/JSPackFormat';
-import JSPackLong from '@jspackTs/JSPackLong';
+import JSPackFormat from './JSPackFormat';
+import JSPackLong from './JSPackLong';
 
 type JSPackFormatTypes = {
   [JSPackFormat.A]: number[];

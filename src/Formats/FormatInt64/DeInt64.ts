@@ -1,7 +1,7 @@
-import DecodeInterface from '@jspackTs/Formats/DecodeInterface';
-import JSPackFormatLength from '@jspackTs/JSPackFormatLength';
-import FormatInt64Data from '@jspackTs/Formats/FormatInt64/FormatInt64Data';
-import JSPackLong from '@jspackTs/JSPackLong';
+import DecodeInterface from '../DecodeInterface';
+import JSPackFormatLength from '../../JSPackFormatLength';
+import FormatInt64Data from './FormatInt64Data';
+import JSPackLong from '../../JSPackLong';
 
 export default class DeInt64 implements DecodeInterface<JSPackLong> {
   private readonly formatLength;

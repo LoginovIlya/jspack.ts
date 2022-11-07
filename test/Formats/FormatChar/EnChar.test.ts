@@ -1,4 +1,4 @@
-import EnChar from '@formatChar/EnChar';
+import EnChar from '@jspackTs/Formats/FormatChar/EnChar';
 
 describe('EnChar', () => {
   test('Test encode char', () => {

@@ -1,6 +1,6 @@
-import EncodeInterface from '@jspackTs/Formats/EncodeInterface';
-import JSPackLong from '@jspackTs/JSPackLong';
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
+import EncodeInterface from '../EncodeInterface';
+import JSPackLong from '../../JSPackLong';
+import ValidatorInterface from '../ValidatorInterface';
 
 export default class EnInt64 implements EncodeInterface<JSPackLong> {
   private readonly validator;

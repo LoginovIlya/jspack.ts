@@ -1,7 +1,7 @@
-import Format754Data from '@format754/Format754Data';
-import JSPackFormatLength from '@jspackTs/JSPackFormatLength';
-import EncodeInterface from '@jspackTs/Formats/EncodeInterface';
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
+import Format754Data from './Format754Data';
+import JSPackFormatLength from '../../JSPackFormatLength';
+import EncodeInterface from '../EncodeInterface';
+import ValidatorInterface from '../ValidatorInterface';
 
 export default class En754 implements EncodeInterface<number> {
   private readonly formatLength;

@@ -1,4 +1,4 @@
-import DecodeInterface from '@jspackTs/Formats/DecodeInterface';
+import DecodeInterface from '../DecodeInterface';
 
 export default class DeString implements DecodeInterface<string> {
   decode(data: Uint8Array): string {

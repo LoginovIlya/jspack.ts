@@ -1,6 +1,6 @@
-import DecodeInterface from '@jspackTs/Formats/DecodeInterface';
-import JSPackFormatLength from '@jspackTs/JSPackFormatLength';
-import FormatIntData from '@formatInt/FormatIntData';
+import DecodeInterface from '../DecodeInterface';
+import JSPackFormatLength from '../../JSPackFormatLength';
+import FormatIntData from './FormatIntData';
 
 export default class DeInt implements DecodeInterface<number> {
   private readonly formatLength;

@@ -1,4 +1,4 @@
-import DeNullByte from '@formatNullByte/DeNullByte';
+import DeNullByte from '@jspackTs/Formats/FormatNullByte/DeNullByte';
 
 describe('DeNullByte', () => {
   test('Test decode null byte', () => {

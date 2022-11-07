@@ -1,5 +1,5 @@
-import EnInt64 from '@formatInt64/EnInt64';
-import EnInt64Validator from '@formatInt64/EnInt64Validator';
+import EnInt64 from '@jspackTs/Formats/FormatInt64/EnInt64';
+import EnInt64Validator from '@jspackTs/Formats/FormatInt64/EnInt64Validator';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 // Test number 543215432154321

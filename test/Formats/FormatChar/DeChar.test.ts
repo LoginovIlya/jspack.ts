@@ -1,4 +1,4 @@
-import DeChar from '@formatChar/DeChar';
+import DeChar from '@jspackTs/Formats/FormatChar/DeChar';
 
 describe('DeChar', () => {
   test('Test decode char', () => {

@@ -1,4 +1,4 @@
-import En754Validator from '@format754/En754Validator';
+import En754Validator from '@jspackTs/Formats/Format754/En754Validator';
 
 describe('EnInt64Validator', () => {
   test('Success validate.', () => {

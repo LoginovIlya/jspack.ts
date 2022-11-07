@@ -1,4 +1,4 @@
-import EnInt64Validator from '@formatInt64/EnInt64Validator';
+import EnInt64Validator from '@jspackTs/Formats/FormatInt64/EnInt64Validator';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 describe('EnInt64Validator', () => {

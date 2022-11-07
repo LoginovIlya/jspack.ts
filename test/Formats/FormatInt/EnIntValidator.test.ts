@@ -1,4 +1,4 @@
-import EnIntValidator from '@formatInt/EnIntValidator';
+import EnIntValidator from '@jspackTs/Formats/FormatInt/EnIntValidator';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 describe('EnIntValidator', () => {

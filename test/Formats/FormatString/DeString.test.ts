@@ -1,4 +1,4 @@
-import DeString from '@formatString/DeString';
+import DeString from '@jspackTs/Formats/FormatString/DeString';
 
 describe('DeString', () => {
   test('Test decode string', () => {

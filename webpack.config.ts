@@ -1,21 +1,6 @@
 import * as path from 'path';
 import { Configuration } from 'webpack';
 import ESLintWebpackPlugin from 'eslint-webpack-plugin';
-import * as JSON5 from 'json5';
-import * as fs from 'fs';
-
-type AliasData = { [index: string]: string };
-type TsConfig = { compilerOptions: { paths: { [index: string ]: string[] } } };
-const tsConfigBase: TsConfig = JSON5.parse(fs.readFileSync('./tsconfig.base.json').toString());
-const alias = ((): AliasData => {
-  const aliasData: AliasData = {};
-
-  Object.entries(tsConfigBase.compilerOptions.paths).forEach(([key, val]) => {
-    aliasData[key.replace('/*', '')] = path.resolve(process.cwd(), `./${val[0].replace('/*', '')}`);
-  });
-
-  return aliasData;
-})();
 
 const config: Configuration = {
   entry: './src/Index.ts',
@@ -31,7 +16,6 @@ const config: Configuration = {
   },
   resolve: {
     extensions: ['.ts'],
-    alias,
   },
   module: {
     rules: [

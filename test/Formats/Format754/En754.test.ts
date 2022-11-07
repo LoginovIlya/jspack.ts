@@ -1,6 +1,6 @@
 import JSPackFormat from '@jspackTs/JSPackFormat';
-import En754 from '@format754/En754';
-import En754Validator from '@format754/En754Validator';
+import En754 from '@jspackTs/Formats/Format754/En754';
+import En754Validator from '@jspackTs/Formats/Format754/En754Validator';
 
 // Test number: 55555.333
 // Float BE: 0x47 0x59 0x3 0x55
@@ -13,7 +13,7 @@ import En754Validator from '@format754/En754Validator';
 // LE: 0x55 0x3 0x59 0xC7
 // BE: 0xC0 0xEB 0x20 0x6A 0xA7 0xEF 0x9D 0xB2
 // LE: 0xB2 0x9D 0xEF 0xA7 0x6A 0x20 0xEB 0xC0
-jest.mock('@format754/En754Validator');
+jest.mock('@jspackTs/Formats/Format754/En754Validator');
 
 describe('En754 (float or double)', () => {
   test('Test encode float. BE.', () => {

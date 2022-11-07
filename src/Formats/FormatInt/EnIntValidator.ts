@@ -1,5 +1,5 @@
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
-import FormatIntData from '@formatInt/FormatIntData';
+import ValidatorInterface from '../ValidatorInterface';
+import FormatIntData from './FormatIntData';
 
 type EnIntFormat = keyof typeof FormatIntData;
 

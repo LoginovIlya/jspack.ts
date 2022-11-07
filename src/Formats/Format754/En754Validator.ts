@@ -1,4 +1,4 @@
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
+import ValidatorInterface from '../ValidatorInterface';
 
 export default class En754Validator implements ValidatorInterface<number> {
   validate(data: number): void {

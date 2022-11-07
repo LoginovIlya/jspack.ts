@@ -1,6 +1,6 @@
-import DecodeInterface from '@jspackTs/Formats/DecodeInterface';
-import JSPackFormatLength from '@jspackTs/JSPackFormatLength';
-import Format754Data from '@format754/Format754Data';
+import DecodeInterface from '../DecodeInterface';
+import JSPackFormatLength from '../../JSPackFormatLength';
+import Format754Data from './Format754Data';
 
 export default class De754 implements DecodeInterface<number> {
   private readonly formatLength;

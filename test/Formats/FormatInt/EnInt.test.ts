@@ -1,6 +1,6 @@
 import JSPackFormat from '@jspackTs/JSPackFormat';
-import EnInt from '@formatInt/EnInt';
-import EnIntValidator from '@formatInt/EnIntValidator';
+import EnInt from '@jspackTs/Formats/FormatInt/EnInt';
+import EnIntValidator from '@jspackTs/Formats/FormatInt/EnIntValidator';
 
 // Test signed char number: -123
 // BE: 0x85
@@ -25,7 +25,7 @@ import EnIntValidator from '@formatInt/EnIntValidator';
 // Test unsigned int or long number: 1234512345
 // BE: 0x49 0x95 0x29 0xD9
 // LE: 0xD9 0x29 0x95 0x49
-jest.mock('@formatInt/EnIntValidator');
+jest.mock('@jspackTs/Formats/FormatInt/EnIntValidator');
 
 describe('EnInt', () => {
   test('Test encode signed char. BE.', () => {

@@ -1,4 +1,4 @@
-import DeInt64 from '@formatInt64/DeInt64';
+import DeInt64 from '@jspackTs/Formats/FormatInt64/DeInt64';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 // Test number: 543215432154321

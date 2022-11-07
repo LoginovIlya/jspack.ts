@@ -1,4 +1,4 @@
-import JSPackFormat from '@jspackTs/JSPackFormat';
+import JSPackFormat from '../../JSPackFormat';
 
 const FormatIntData = {
   [JSPackFormat.b]: { isSigned: true, min: -(2 ** 7), max: (2 ** 7) - 1 },

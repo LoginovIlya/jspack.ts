@@ -1,4 +1,4 @@
-import JSPackFormat from '@jspackTs/JSPackFormat';
+import JSPackFormat from '../../JSPackFormat';
 
 const FormatInt64Data = {
   [JSPackFormat.q]: { isSigned: true },

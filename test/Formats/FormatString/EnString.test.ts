@@ -1,4 +1,4 @@
-import EnString from '@formatString/EnString';
+import EnString from '@jspackTs/Formats/FormatString/EnString';
 
 describe('DeString', () => {
   test('Test encode string', () => {

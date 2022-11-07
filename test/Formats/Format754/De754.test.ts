@@ -1,4 +1,4 @@
-import De754 from '@format754/De754';
+import De754 from '@jspackTs/Formats/Format754/De754';
 import JSPackFormat from '@jspackTs/JSPackFormat';
 
 // Test number: 55555.333

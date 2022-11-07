@@ -1,4 +1,4 @@
-import EnNullByte from '@formatNullByte/EnNullByte';
+import EnNullByte from '@jspackTs/Formats/FormatNullByte/EnNullByte';
 
 describe('EnNullByte', () => {
   test('Test encode null byte', () => {

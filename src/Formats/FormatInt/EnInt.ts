@@ -1,7 +1,7 @@
-import EncodeInterface from '@jspackTs/Formats/EncodeInterface';
-import FormatIntData from '@formatInt/FormatIntData';
-import JSPackFormatLength from '@jspackTs/JSPackFormatLength';
-import ValidatorInterface from '@jspackTs/Formats/ValidatorInterface';
+import EncodeInterface from '../EncodeInterface';
+import FormatIntData from './FormatIntData';
+import JSPackFormatLength from '../../JSPackFormatLength';
+import ValidatorInterface from '../ValidatorInterface';
 
 export default class EnInt implements EncodeInterface<number> {
   private readonly formatLength;

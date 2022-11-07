@@ -1,4 +1,4 @@
-import JSPackFormat from '@jspackTs/JSPackFormat';
+import JSPackFormat from '../../JSPackFormat';
 
 const Format754Data = {
   [JSPackFormat.f]: { mLen: 23, rt: 2 ** (-24) - 2 ** (-77) },

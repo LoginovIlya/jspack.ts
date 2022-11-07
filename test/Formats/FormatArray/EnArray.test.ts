@@ -1,4 +1,4 @@
-import EnArray from '@formatArray/EnArray';
+import EnArray from '@jspackTs/Formats/FormatArray/EnArray';
 
 describe('EnArray', () => {
   test('Test encode array', () => {

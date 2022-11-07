@@ -1,9 +1,15 @@
 {
   "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "paths": {
+      "@jspackTs/*": ["src/*"]
+    }
+  },
   "include": [
     "src/**/*",
     "test/**/*",
     "jest.config.ts",
-    "webpack.config.ts",
+    "webpack.config.ts"
   ]
 }
