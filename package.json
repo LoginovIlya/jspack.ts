@@ -28,6 +28,7 @@
   ],
   "main": "dist/main.js",
   "types": "types/Index.d.ts",
+  "module": "dist/main.js",
   "files": [
     "dist",
     "types"
