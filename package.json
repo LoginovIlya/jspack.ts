@@ -1,6 +1,6 @@
 {
   "name": "jspack.ts",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Library to pack/unpack binary data",
   "keywords": [
     "binary",
